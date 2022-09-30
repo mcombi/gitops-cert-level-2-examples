@@ -6,6 +6,21 @@ metadata:
 spec:
   generators:
     # matrix 'parent' generator
+    - union:
+              mergeKeys:
+                - cluster
+              generators:
+                - list:
+                    elements:
+                      - cluster: cluster-2
+                        url: https://10.5.0.230:6443
+                        values:
+                          project: default
+                      - cluster: cluster-3
+                        url: https://10.5.0.242:6443
+                        values:
+                          project: default
+                
     - matrix:
         generators:
           # git generator, 'child' #1
