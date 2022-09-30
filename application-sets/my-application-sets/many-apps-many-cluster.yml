@@ -29,8 +29,8 @@ spec:
         targetRevision: HEAD
         path: application-sets/example-apps/*
       destination:
-        #server: '{{server}}'
-        namespace: default
+        server: '{{server}}'
+        namespace: billing
       # Sync policy
       syncPolicy:
         syncOptions:
